@@ -3,5 +3,8 @@ title: hello
 tags:
   - any
 categories:
-  - any
+ - Diary
+ - Life
 ---
+
+# 你好
