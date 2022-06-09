@@ -32,4 +32,15 @@ jobs:
           npm install
           npm run clean
           npm run build
-          ls
+      
+      - name: Prepare Static
+        run: |
+          ls public
+          mkdir static
+          cp -r public/* static
+          ls static
+
+
+
+          
+          
