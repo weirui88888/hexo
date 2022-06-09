@@ -58,8 +58,9 @@ jobs:
           echo "DEPLOY_VERSION=$(date "+%y%m%d").$GITHUB_RUN_NUMBER"
           echo "-------------------- deploy version end ----------------------"
           echo "DEPLOY_VERSION=$(date "+%y%m%d").$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
-          tar -czf HEXO-STATIC-${DEPLOY_VERSION}.tar.gz ./static
-
+          tar -czf hexo-static-${DEPLOY_VERSION}.tar.gz ./static
+          ls
+          
       - name: Create Release
         uses: softprops/action-gh-release@v1
         env:
@@ -70,7 +71,7 @@ jobs:
           body: ${{steps.changelog.outputs.description}}
           draft: false
           prerelease: false
-          files: HEXO-STATIC-*.tar.gz
+          files: hexo-static-*.tar.gz
 
 
           
