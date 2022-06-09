@@ -63,7 +63,7 @@ jobs:
 
       - name: Package Static
         run: |
-          tar -czf hexo-static-${BUILD_VERSION}.tar.gz ./static
+          tar -czf hexo-static-${{ steps.buildVersion.outputs.version }}.tar.gz ./static
           ls
 
       - name: Create Release
