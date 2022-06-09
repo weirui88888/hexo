@@ -37,6 +37,7 @@ jobs:
         run: |
           mkdir static
           cp -r public/* static
+          cp 404.html static
           echo "-------------------- static content start --------------------"
           ls static
           echo "-------------------- static content end ----------------------"

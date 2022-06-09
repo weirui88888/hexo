@@ -2,6 +2,12 @@
 
 # Hexo Changelog
 
+## [0.0.2]
+
+### Added
+
+- 🎉 add 404.html
+
 ## [0.0.1]
 
 ### Added
