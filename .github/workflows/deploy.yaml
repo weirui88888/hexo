@@ -6,9 +6,11 @@ on:
       - master
 
 jobs:
-  deploy:
+  deploy: #job1 通过outpus共享变量给其下游的作业使用
     name: Deploy Hexo
     runs-on: ubuntu-latest
+    outputs:
+      deploy_version: ${{ steps.buildVersion.outputs.version }}
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.7.0
@@ -53,7 +55,7 @@ jobs:
             folder: static
       
       - name: Build Version
-        id: buildVersion
+        id: deployVersion
         run: |
           echo "-------------------- deploy version --------------------"
           echo "deploy_version=$(date "+%y%m%d").$GITHUB_RUN_NUMBER"
@@ -63,7 +65,7 @@ jobs:
 
       - name: Package Static
         run: |
-          tar -czf hexo-static-${{ steps.buildVersion.outputs.version }}.tar.gz ./static
+          tar -czf hexo-static-${{ steps.deployVersion.outputs.version }}.tar.gz ./static
 
       - name: Remove Old Release Drafts
         env:
@@ -88,17 +90,18 @@ jobs:
           prerelease: false
           files: hexo-static-*.tar.gz
 
-  View:
+  View: # job2 这个可以叫做作业，作业中的steps叫做步骤，下面演示如何使用环境变量，以及使用上游作业中的变量
     name: View Env
     runs-on: ubuntu-latest
     steps:
       - name: View Env Detail
+      # 环境变量可以不需要双引号包裹
         run: |
-          echo "$GITHUB_ACTION"
-          echo "$GITHUB_ACTOR"
-          echo "$GITHUB_EVENT_NAME"
+          echo $GITHUB_ACTION   
+          echo $GITHUB_ACTOR
+          echo $GITHUB_EVENT_NAME
           echo $GITHUB_REF
-          echo ${{ steps.buildVersion.outputs.version }}
+          echo ${{needs.deploy.outputs.deploy_version}} 
         
       
 
