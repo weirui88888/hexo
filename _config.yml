@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ""
-description: ""
+title: newArray
+subtitle: "front-end worker"
+description: "Record the moments in life and work"
 keywords:
 author: John Doe
 language: en
@@ -26,7 +26,7 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-code_dir: downloads/code
+code_dir: code
 i18n_dir: :lang
 skip_render:
 
