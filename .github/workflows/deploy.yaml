@@ -97,7 +97,8 @@ jobs:
           echo "$GITHUB_ACTION"
           echo "$GITHUB_ACTOR"
           echo "$GITHUB_EVENT_NAME"
-          echo "${{env.GITHUB_REF}}"
+          echo $GITHUB_REF
+          echo ${{env.GITHUB_REF}}
           
         
       
