@@ -66,11 +66,14 @@ jobs:
           tar -czf hexo-static-${{ steps.buildVersion.outputs.version }}.tar.gz ./static
 
       - name: Remove Old Release Drafts
-        uses: hugo19941994/delete-draft-releases@v1.0.0
-        with:
-          threshold: 5d
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: |
+          curl -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/$GITHUB_REPOSITORY/releases \
+            | tr '\r\n' ' ' \
+            | jq '.[] | select(.draft == true) | .id' \
+            | xargs -I '{}' \
+          curl -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/$GITHUB_REPOSITORY/releases/{}
         
 
       - name: Create Release
@@ -84,6 +87,20 @@ jobs:
           draft: true
           prerelease: false
           files: hexo-static-*.tar.gz
+
+  View:
+    name: View Env
+    runs-on: ubuntu-latest
+    steps:
+      - name: View Env Detail
+        run: |
+          echo "$GITHUB_ACTION"
+          echo "$GITHUB_ACTOR"
+          echo "$GITHUB_EVENT_NAME"
+          echo "${{env.GITHUB_REF}}"
+          
+        
+      
 
 
           
