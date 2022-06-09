@@ -13,7 +13,7 @@ jobs:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.7.0
         with:
-          access_token: ${{secrets.HEXO_GITHUB_TOKEN}}
+          access_token: ${{secrets.GITHUB_TOKEN}}
 
       - name: Fetch Sources
         uses: actions/checkout@v3
@@ -67,8 +67,11 @@ jobs:
 
       - name: Remove Old Release Drafts
         uses: hugo19941994/delete-draft-releases@v1.0.0
+        with:
+          threshold: 5d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
