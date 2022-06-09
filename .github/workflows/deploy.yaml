@@ -74,7 +74,7 @@ jobs:
           tag_name: v${{steps.changelog.outputs.version}}
           name: Release v${{steps.changelog.outputs.version}}
           body: ${{steps.changelog.outputs.description}}
-          draft: false
+          draft: true
           prerelease: false
           files: hexo-static-*.tar.gz
 
