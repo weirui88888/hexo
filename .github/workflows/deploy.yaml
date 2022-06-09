@@ -1,0 +1,19 @@
+name: Deploy Hexo To Oss
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy Hexo
+    runs-on: [self-hosted, Linux, office]
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.7.0
+        with:
+          access_token: ${{secrets.HEXO_GITHUB_TOKEN}}
+
+      - name: Fetch Sources
+        uses: actions/checkout@v2
