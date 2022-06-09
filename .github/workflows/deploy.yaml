@@ -35,10 +35,11 @@ jobs:
       
       - name: Prepare Static
         run: |
-          ls public
           mkdir static
           cp -r public/* static
+          echo "-------------------- static content start --------------------"
           ls static
+          echo "-------------------- static content end ----------------------"
 
 
 
