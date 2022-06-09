@@ -58,6 +58,18 @@ jobs:
           echo "DEPLOY_VERSION=$(date "+%y%m%d").$GITHUB_RUN_NUMBER"
           echo "-------------------- deploy version end ----------------------"
           echo "DEPLOY_VERSION=$(date "+%y%m%d").$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+          tar -czf HEXO-STATIC-${DEPLOY_VERSION}.tar.gz ./static
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: v${{steps.changelog.outputs.version}}
+          release_name: Release v${{steps.changelog.outputs.version}}
+          body: ${{steps.changelog.outputs.description}}
+          draft: false
+          prerelease: false
 
 
           
