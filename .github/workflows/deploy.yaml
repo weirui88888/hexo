@@ -52,15 +52,18 @@ jobs:
             endpoint: oss-cn-hangzhou.aliyuncs.com
             folder: static
       
-      - name: Package Static For Release
-        id: buildversion
+      - name: Build Version
+        id: buildVersion
         run: |
           echo "-------------------- deploy version --------------------"
           echo "deploy_version=$(date "+%y%m%d").$GITHUB_RUN_NUMBER"
           echo "-------------------- deploy version --------------------"
           echo "deploy_version=$(date "+%y%m%d").$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
           echo "::set-output name=version::$(date "+%y%m%d").$GITHUB_RUN_NUMBER"
-          tar -czf hexo-static-${deploy_version}.tar.gz ./static
+
+      - name: Package Static
+        run: |
+          tar -czf hexo-static-${BUILD_VERSION}.tar.gz ./static
           ls
 
       - name: Create Release
@@ -71,7 +74,7 @@ jobs:
           tag_name: v${{steps.changelog.outputs.version}}
           name: Release v${{steps.changelog.outputs.version}}
           body: ${{steps.changelog.outputs.description}}
-          draft: true
+          draft: false
           prerelease: false
           files: hexo-static-*.tar.gz
 
