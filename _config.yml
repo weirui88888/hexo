@@ -44,7 +44,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ""
@@ -103,3 +103,11 @@ theme: Hacker
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ""
+
+# Custom
+
+prism_plugin:
+  mode: "preprocess"
+  theme: "tomorrow"
+  line_number: false # default false
+
