@@ -16,4 +16,14 @@ jobs:
           access_token: ${{secrets.HEXO_GITHUB_TOKEN}}
 
       - name: Fetch Sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      
+      - name: Setup Node 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: "npm"
+
+      - name: Preview Rop
+        run: |
+          ls
