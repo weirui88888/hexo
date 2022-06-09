@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Deploy Hexo
-    runs-on: [self-hosted, Linux, office]
+    runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.7.0
