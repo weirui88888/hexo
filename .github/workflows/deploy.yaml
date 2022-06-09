@@ -98,8 +98,7 @@ jobs:
           echo "$GITHUB_ACTOR"
           echo "$GITHUB_EVENT_NAME"
           echo $GITHUB_REF
-          echo ${{env.GITHUB_REF}}
-          
+          echo ${{ steps.buildVersion.outputs.version }}
         
       
 
