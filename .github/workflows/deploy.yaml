@@ -41,6 +41,15 @@ jobs:
           ls static
           echo "-------------------- static content end ----------------------"
 
+      - name: upload files to OSS
+        uses: fangbinwei/aliyun-oss-website-action@v1
+        with:
+            accessKeyId: ${{ secrets.ALI_ACCESS_KEY_ID }}
+            accessKeySecret: ${{ secrets.ALI_ACCESS_KEY_SECRET }}
+            bucket: newarray-hexo
+            # use your own endpoint
+            endpoint: oss-cn-hangzhou.aliyuncs.com
+            folder: static
 
 
           
