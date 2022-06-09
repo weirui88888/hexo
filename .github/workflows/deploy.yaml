@@ -23,6 +23,13 @@ jobs:
         with:
           node-version: 14
 
-      - name: Preview Rop
+      - name: Parse Changelog
+        id: changelog
+        uses: coditory/changelog-parser@v1
+
+      - name: Install Dependencies & Build
         run: |
+          npm install
+          npm run clean
+          npm run build
           ls
