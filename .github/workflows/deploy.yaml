@@ -93,6 +93,7 @@ jobs:
   View: # job2 这个可以叫做作业，作业中的steps叫做步骤，下面演示如何使用环境变量，以及使用上游作业中的变量
     name: View Env
     runs-on: ubuntu-latest
+    needs: deploy
     steps:
       - name: View Env Detail
       # 环境变量可以不需要双引号包裹
