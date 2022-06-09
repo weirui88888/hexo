@@ -1,0 +1,55 @@
+{
+	// Place your hexo 工作区 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"使用不带宽度的图片": {
+		"prefix": "img-nowidth",
+		"body": [
+			"{% img $CLIPBOARD %}"
+		],
+		"description": "使用不带宽度的图片"
+	},
+	"使用带宽度的图片": {
+		"prefix": "img-width",
+		"body": [
+			"{% img $CLIPBOARD ${2:500} %}"
+		],
+		"description": "使用带宽度的图片"
+	},
+	"最常用的quote":{
+		"prefix": "quote-base",
+		"body":[
+			"{% blockquote %}",
+			"$CLIPBOARD",
+			"{% endblockquote %}"
+		]
+	},
+	"使用带作者的quote":{
+		"prefix": "quote-author",
+		"body":[
+			"{% blockquote $1 %}",
+			"$2",
+			"{% endblockquote %}"
+		]
+	},
+	"使用带作者和介绍的quote":{
+		"prefix": "quote-author-source",
+		"body":[
+			"{% blockquote $1 $2 %}",
+			"$3",
+			"{% endblockquote %}"
+		]
+	},
+	"引用网络上的文章":{
+		"prefix": "quote-author-link-title",
+		"body":[
+			"{% blockquote $1 $2 $3 %}",
+			"$4",
+			"{% endblockquote %}"
+		]
+	},
+}
