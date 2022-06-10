@@ -23,11 +23,14 @@ layout: tool
 [点击实现撒花效果](https://party.js.org/)
 [快速生成好看的背景图片](https://doodad.dev/pattern-generator/)
 [好看的背景渐变](https://webgradients.com/)
+
 ## 在线编辑器
 [JSON可视化编辑器](https://jsonvisio.com/editor)
 [codeBeautify代码转换](https://codebeautify.org/)
 [codesandbox](https://codesandbox.io/)
 [codepen可copy的特效](https://codepen.io/trending)
+[在线调试box-shadow,border-radius](https://www.cssmatic.com/)
+[在线调试渐变色](https://cssgradient.io/)
 
 
 ## 资源
@@ -39,5 +42,6 @@ layout: tool
 ## Vue插件
 [BetterScroll滚动](https://better-scroll.github.io/docs/zh-CN/)
 [mescroll下拉刷新上拉加载](http://www.mescroll.com/index.html)
+
 
 
