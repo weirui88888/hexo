@@ -10,6 +10,6 @@ menu:
 gitalk: true
 gitalk_owner: weirui88888
 gitalk_admin: [weirui88888]
-gitalk_repo: gittalk
-gitalk_client_id: Iv1.793919b109974338
-gitalk_client_secret: bfb609148d838b9a52db2ccec2bbb7be7f842780
+gitalk_repo: hexo
+gitalk_client_id: 095d02e02b4cb9d84080
+gitalk_client_secret: dea84a20fe0e77c570e0370c66eb7a0e9e2f29cb
