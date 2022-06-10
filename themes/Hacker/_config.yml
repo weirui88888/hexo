@@ -9,7 +9,7 @@ menu:
 # gitalk
 gitalk: true
 gitalk_owner: weirui88888
-gitalk_admin: ["weirui88888"]
-gitalk_repo: https://github.com/weirui88888/gittalk
+gitalk_admin: [weirui88888]
+gitalk_repo: gittalk
 gitalk_client_id: Iv1.559cd3913fc25ee6
-gitalk_client_secret: 7577fe55ee6736916398f40b184c12c5f38f79bd
+gitalk_client_secret: b9a2709d39ff416c5b7d8bd39b6b1672fca2c5cb
