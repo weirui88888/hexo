@@ -6,6 +6,22 @@
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
 	// Placeholders with the same ids are connected.
 	// Example:
+	"more":{
+		"prefix": "more",
+		"body": [
+			"<!-- more -->",
+		],
+		"description": "分割"
+	},
+	"代码块":{
+		"prefix": "```",
+		"body": [
+			"```javascript",
+			"$CLIPBOARD",
+			"```"
+		],
+		"description": "使用链接"
+	},
 	"使用链接":{
 		"prefix": "link",
 		"body": [
