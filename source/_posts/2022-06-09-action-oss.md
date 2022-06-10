@@ -42,6 +42,8 @@ categories:
 
 一个job中的变量共享很容易，多个job中的变量可参考`deploy.yaml`
 
+### 自定义环境变量语法
+
 > github action中的secrets.GITHUB_TOKEN，可以不用手动的设置，会由action提供
 
 
