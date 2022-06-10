@@ -5,3 +5,11 @@ menu:
   标签: /tags
   关于: /about
   宝藏: /tool
+
+# gitalk
+gitalk: true
+gitalk_owner: weirui88888
+gitalk_admin: ["weirui88888"]
+gitalk_repo: https://github.com/weirui88888/gittalk
+gitalk_client_id: Iv1.559cd3913fc25ee6
+gitalk_client_secret: 7577fe55ee6736916398f40b184c12c5f38f79bd
