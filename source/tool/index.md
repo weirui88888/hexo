@@ -1,5 +1,5 @@
 ---
-title: 吃灰神器
+title: 前端工具集
 date: 2022-06-09 18:53:26
 layout: tool
 ---
