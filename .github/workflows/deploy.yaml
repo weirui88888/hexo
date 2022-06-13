@@ -44,6 +44,10 @@ jobs:
           ls static
           echo "-------------------- static content end ----------------------"
 
+      - name: Add Css Version Avoid Browser Cache
+        run: |
+          for file in `find static -name "index.html"`;do sed -i "s#css/style.css#css/style.css?version=$GITHUB_RUN_NUMBER#g" $file;done
+
       - name: Upload Files To OSS
         uses: fangbinwei/aliyun-oss-website-action@v1
         with:
