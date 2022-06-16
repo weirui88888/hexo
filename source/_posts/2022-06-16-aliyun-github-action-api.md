@@ -24,7 +24,7 @@ categories:
 
 明确你想要用该 Action 来对你的 CDN 做些什么配置。然后去[官方 API 文档](https://help.aliyun.com/document_detail/106661.html)找到对应的方法，这里以最简单的`DescribeCdnDomainConfigs`进行演示
 
-{% img http://show.newarray.vip/aliyun-cdn-api-action/DescribeCdnDomainConfigs.png 800 %}
+{% img https://show.newarray.vip/aliyun-cdn-api-action/DescribeCdnDomainConfigs.png 800 %}
 
 <!-- more -->
 
@@ -99,7 +99,7 @@ categories:
 
 同时为了能够方便使用者知道自己使用该 Action 的操作行为路径，在应用程序中，我对关键步骤进行了**日志输出**，方便用户明确自己的`入参`，`实际调用CDN方法`，`api调用结果`
 
-![LOG-MESSAGE](http://show.newarray.vip/aliyun-cdn-api-action/responseBody.png)
+![LOG-MESSAGE](https://show.newarray.vip/aliyun-cdn-api-action/responseBody.png)
 
 ### 对于 parameters 格式的阐述（拓展）
 
