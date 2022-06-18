@@ -75,4 +75,11 @@
 			"{% endblockquote %}"
 		]
 	},
+	"手写体段落":{
+		"prefix": "painted",
+		"body":[
+			"<p class='painted'>$1</p>"
+		],
+		"description": "使用手绘体段落"
+	},
 }
