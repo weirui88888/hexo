@@ -1,7 +1,13 @@
 ---
 title: patch-package
+date: 2022-06-18 19:07:01
 tags:
+  - npm
+  - node
+categories:
+  - npm
 ---
+
 
 
 这是一款比较有意思的`npm`包，举个场景，可能更好理解：
