@@ -12,13 +12,13 @@ categories:
 
 
 
-## 简介
+### 简介
 
 一款基于阿里云 CDN API 的 [Github Action](https://github.com/marketplace/actions/aliyun-cdn-sdk)，几乎支持所有的官方 API 调用，具体的细节和使用方式请结合[CDN API 参考](https://help.aliyun.com/document_detail/91856.html)
 
 该[aliyun-cdn-sdk](https://github.com/weirui88888/aliyun-cdn-sdk)基于官方仓库[官方模板仓库](https://github.com/actions/typescript-action)进行创建
 
-## 使用步骤
+### 使用步骤
 
 **1.明确意图**
 
@@ -49,7 +49,7 @@ categories:
 - 1.调用 cdn api 是否成功
 - 2.能够根据`responseBody`获取一些有用的信息，比如获取配置项的的`configId`，通过 configId 可以在接下来的步骤中，实现对指定配置的更新和删除
 
-## 参数说明
+### 参数说明
 
 **入参**
 
@@ -95,13 +95,13 @@ categories:
     echo ${{steps.getDescribeCdnDomainConfigsConfig.outputs.responseBody}}
 ```
 
-## 调试信息
+### 调试信息
 
 同时为了能够方便使用者知道自己使用该 Action 的操作行为路径，在应用程序中，我对关键步骤进行了**日志输出**，方便用户明确自己的`入参`，`实际调用CDN方法`，`api调用结果`
 
 ![LOG-MESSAGE](https://show.newarray.vip/aliyun-cdn-api-action/responseBody.png)
 
-## 对于 parameters 格式的阐述（拓展）
+### 对于 parameters 格式的阐述（拓展）
 
 一般开发者**不需要**过多关注下面的内容，除非你有一些**高级配置**需要配置，具体的配置项请参考[aliyun/tea-util](https://github.com/aliyun/tea-util/blob/10d152a3838594532b734956a3d72c81c94b4241/ts/src/client.ts#L8)
 
@@ -146,14 +146,14 @@ for (let [optionsKey, optionValue] of Object.entries(requestOptions)) {
 对于我这么做的方式，我也不确定它到底对不对，但是至少看起来能够保证程序正常的运行。
 
 
-## 相关链接
+### 相关链接
 
 [如何获取AccessKey](https://help.aliyun.com/document_detail/53045.html)
 [阿里云CDN API](https://help.aliyun.com/document_detail/106661.html)
 [手把手教你使用patch-package给npm包打补丁](https://juejin.cn/post/6962554654643191815#comment)
 
 
-## 参考
+### 参考
 
 [Github action 的开发到发布](https://www.kikt.top/posts/github/actions/create/)
 [使用 JavaScript 编写自定义 Github Action](https://yfd.im/2020/04/15/write_custom_github_action_using_javascript/)

@@ -3,12 +3,12 @@ title: 前端工具集
 date: 2022-06-09 18:53:26
 layout: tool
 ---
-## 官方文档
+### 官方文档
 
 [markDown官方教程](https://markdown.com.cn/)
 [hexo官方文档](https://hexo.io/zh-cn/)
 
-## 工具
+### 工具
 [创建代码片段snippet](https://snippet-generator.app/)
 [gitemoji](https://gitmoji.dev/)
 [gitemoji大全](https://www.webfx.com/tools/emoji-cheat-sheet/)
@@ -24,7 +24,7 @@ layout: tool
 [快速生成好看的背景图片](https://doodad.dev/pattern-generator/)
 [好看的背景渐变](https://webgradients.com/)
 
-## 在线编辑器
+### 在线编辑器
 [JSON可视化编辑器](https://jsonvisio.com/editor)
 [codeBeautify代码转换](https://codebeautify.org/)
 [codesandbox](https://codesandbox.io/)
@@ -33,13 +33,13 @@ layout: tool
 [在线调试渐变色](https://cssgradient.io/)
 
 
-## 资源
+### 资源
 [免费字体下载](https://uncut.wtf/)
 [Pexels免费下载图片](https://www.pexels.com/zh-cn/)
 [unsplash免费下载图片](https://unsplash.com/)
 [web安全色](https://www.bootcss.com/p/websafecolors/)
 [100font免费字体](https://www.100font.com/forum-1-1.htm?tagids=12_0_0_0)
-## Vue插件
+### Vue插件
 [BetterScroll滚动](https://better-scroll.github.io/docs/zh-CN/)
 [mescroll下拉刷新上拉加载](http://www.mescroll.com/index.html)
 
