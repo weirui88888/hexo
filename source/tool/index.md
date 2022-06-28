@@ -7,6 +7,7 @@ layout: tool
 
 [markDown官方教程](https://markdown.com.cn/)
 [hexo官方文档](https://hexo.io/zh-cn/)
+[简单教程汇总工具](https://www.twle.cn/)
 
 ### 工具
 [创建代码片段snippet](https://snippet-generator.app/)
