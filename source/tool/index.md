@@ -40,6 +40,7 @@ layout: tool
 [unsplash免费下载图片](https://unsplash.com/)
 [web安全色](https://www.bootcss.com/p/websafecolors/)
 [100font免费字体](https://www.100font.com/forum-1-1.htm?tagids=12_0_0_0)
+[自由字体](https://ziyouziti.com/)
 ### Vue插件
 [BetterScroll滚动](https://better-scroll.github.io/docs/zh-CN/)
 [mescroll下拉刷新上拉加载](http://www.mescroll.com/index.html)
