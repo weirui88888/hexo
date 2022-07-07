@@ -9,6 +9,11 @@ layout: tool
 [hexo官方文档](https://hexo.io/zh-cn/)
 [简单教程汇总工具](https://www.twle.cn/)
 
+### 学习网站
+
+[短小精悍的一行Javascript](https://1loc.dev/)
+[如何学习正则](https://regexlearn.com/zh-cn)
+
 ### 工具
 [创建代码片段snippet](https://snippet-generator.app/)
 [gitemoji](https://gitmoji.dev/)
@@ -17,6 +22,9 @@ layout: tool
 [carbon在线生成代码图片](https://carbon.now.sh/)
 [undraw在线生成风格统一的svg或者png图片](https://undraw.co/illustrations)
 [正则表达式在线调试](https://regexr.com/)
+[可视化中文在线调试正则](https://regex-vis.com/?l=1)
+[i Hate Regex具备大量可供使用的正则](https://ihateregex.io/)
+[Regex Learn - 逐步从零基础到高阶](https://regexlearn.com/zh-cn)
 [文本对比工具](https://tool.lu/diff)
 [npm趋势图](https://www.npmtrends.com/)
 [单元测试覆盖率集成](https://about.codecov.io/)
