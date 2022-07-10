@@ -1,11 +1,25 @@
-<h2 align="center">一款可以一键生成关键词云图的小工具</h2>
-<p align="center"><img src="https://img.shields.io/badge/npm-%40v1.0.0-yellow"/> <img src="https://img.shields.io/badge/node-command-brightgreen"/> <img src="https://img.shields.io/badge/canvas-draw-orange"/></p>
+---
+date: 2022-07-10 10:42:07
+title: 一款可以基于markdown内容生成文件中关键词云图的小工具
+tags:
+  - 开源
+  - node
+  - canvas
+  - commander
+  - markdown
+  - github
+  - oss
+categories:
+  - 开源
+---
+
+<p align="center" class="shields-container"><a href="https://www.npmjs.com/package/draw-md-keyword"><img src="https://img.shields.io/badge/npm-%40v1.0.3-yellow"/></a> <img src="https://img.shields.io/badge/node-command-brightgreen"/> <img src="https://img.shields.io/badge/canvas-draw-orange"/></p>
+
+_Tip:npm 全局安装的时候，最好使用其它源，比如 taobao，或者 cnpm，直接跳转[如何安装使用](https://github.com/weirui88888/draw-md-keyword#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)_
 
 下面这张包含本篇 README.md 关键词云图和作者签名的图片，就是使用该工具库一键生成后上传到阿里云上，来作为该 README.md 的封面图的。
 
-<p align="center"><img src="https://show.newarray.vip/blog/dmk-show.png"/></p>
-
-
+<p align="center"><img src="https://show.newarray.vip/blog/dmk-show-v3.png"/></p>
 
 ## 背景
 
@@ -16,6 +30,8 @@
 有了这个想法之后，我便陷入了茶不思饭不想的困境中...
 
 在经历了一个多礼拜时长，60 余次代码提交以及 1500 行有效代码实现后，它诞生了...
+
+<!-- more -->
 
 ## 简介
 
@@ -35,7 +51,7 @@
 - 支持设置字体大小
 - 支持设置最大关键词数量
 - 支持黑+白的主题模式
-- 支持多种字体
+- 支持自定义字体，目前支持手绘风格 zh 和英文圆润字体 en
 - 支持各种文件夹命名格式
 - 支持设置图片右下角作者签名
 - ...
@@ -108,13 +124,13 @@ dmk verify github
 
 ## 命令
 
-| 支持的命令 |     参数      |                                       命令阐述                                       |
-| :--------: | :-----------: | :----------------------------------------------------------------------------------: |
-|  dmk init  |      无       |               生成默认配置可用的配置文件，用户自定义配置全在这里面设置               |
+| 支持的命令 |     参数      |                           命令阐述                           |
+| :--------: | :-----------: | :----------------------------------------------------------: |
+|  dmk init  |      无       |   生成默认配置可用的配置文件，用户自定义配置全在这里面设置   |
 |  dmk draw  |  md-filepath  | 基于你输入的 md 格式的文件路径和你的自定义配置生成一张随机样式且包含文件关键词的图片 |
-|  dmk oss   | png-filepath  |        基于你输入的 png 格式的图片路径和你的自定义配置上传图片到阿里云 oss 上        |
-| dmk github | png-filepath  |      基于你输入的 png 格式的图片路径和你的自定义配置上传图片到阿里云 github 上       |
-| dmk verify | oss \| github | 校验你在配置文件中关于上传图片的一些参数设置项是否正确，也就是你设置的 token 对不对  |
+|  dmk oss   | png-filepath  | 基于你输入的 png 格式的图片路径和你的自定义配置上传图片到阿里云 oss 上 |
+| dmk github | png-filepath  | 基于你输入的 png 格式的图片路径和你的自定义配置上传图片到阿里云 github 上 |
+| dmk verify | oss \| github | 校验你在配置文件中关于上传图片的一些参数设置项是否正确，也就是你设置的 token 对不对 |
 
 ## 配置文件
 
@@ -133,7 +149,7 @@ module.exports = {
     themeLightFontColor: '#000000', // theme为light情况下，绘制关键词的颜色，如果不是一个hex格式的颜色，会进行随机颜色绘制
     themeLightBorder: true, // theme为light情况下，绘制的图片是否需要边框，默认需要
     fontStyle: 'normal', // normal正常字体，italic斜体（斜体会使用Microsoft YaHei）
-    fontFamily: 'paint' // 支持七种字体：brush毛笔体，cartoon卡通体，hollow镂空体，paint画刷体，kai楷体，cursive草书，newYork专供英文字体，如果设置后会选中设置的字体，否则会随机进行匹配
+    fontFamily: 'zh' // 目前支持中英文两种字体，zh为中文手绘体，en为圆润英文字体，如果设置后会选中设置的字体，否则会随机进行匹配
   },
   copyAble: true,// 是否需要在上传图片后，帮你自动复制md图片格式到剪贴板中，方便你粘贴使用
   folderName: 'dmk', // 生成图片的文件夹名称
@@ -144,7 +160,7 @@ module.exports = {
   authorOption: {
     author: 'weirui88888', // 作者名
     font: {
-      family: 'cursive', // 字体，支持上面的几种，选择的字体可能不能完全适应你的作者名，请选择合适的
+      family: 'zh', // 同上，当前支持zh和en
       color: '#000000', // 字体颜色，如果在暗黑模式下，请设置正确的颜色，否则看不见～
       size: 18 // 字体大小，注：作者绘制区域在canvas画布的右下角100*100大小，过多的字体或者过大的字体导致看不见～
     }
@@ -206,7 +222,7 @@ module.exports = dkConfig
 
 ## NEXT
 
-基于用户重口难调和使用场景各异的背景，我没办法在短时间内实现更多人性化且丰富的自定义配置需求。但这只是一个**开始**，最主要的是去**做**和**实现**，很多程序员都停留在观看文档，在心里盘算着如何实现某一个功能。这无异于在浪费时间且毫无价值。因为人的记忆是有限的，并且很多时候不是你以为的就是你以为的
+基于用户众口难调和使用场景各异的背景，我没办法在短时间内实现更多人性化且丰富的自定义配置需求。但这只是一个**开始**，最主要的是去**做**和**实现**，很多程序员都停留在观看文档，在心里盘算着如何实现某一个功能。这无异于在浪费时间且毫无价值。因为人的记忆是有限的，并且很多时候不是你以为的就是你以为的
 
 接下来的任务，我会基于实际的使用场景出发，继续丰富该工具库的功能，现有的想法有以下几点：
 
@@ -214,6 +230,7 @@ module.exports = dkConfig
 - 是否需要支持基于远端的**html url**链接进行绘制，这样就不用局限于只能基于本地的 md 文件进行图片生成了
 - 是否需要通过命令行传参数的形式，允许用户自定义选择要进行绘制的关键词类型，现在是默认会解析出 md 文件中所有强调\*\*\*\*和转义反引号``包含的关键词
   - 支持了通过命令行传参的功能后，你就可以这样使用了：`dmk draw ./xxx/xxx.md --strong`代表你只需要基于你的文档中的加粗\*\*\*\*的关键词进行绘制，`dmk draw ./xxx/xxx.md --code`代表你只需要基于你的文档中的转义反引号``中关键词进行绘制
+- 现在支持的几种字体都是网上找的可商用的，放在工程中还是有点大，考虑再支持一个命令，可以一键支持用户使用自定义网络上的任意字体，至于该命令叫啥，还没有想好...
 
 因为我一个人的能力和时间是有限的，就我现在回想来看，代码实现中，还是有着一些不太如人意的实现。比如：
 
@@ -227,9 +244,24 @@ module.exports = dkConfig
 
 ## 提示
 
+- 该包中用到的[canvas](https://github.com/Automattic/node-canvas)在安装的时候可能会出现一些莫名其妙的问题，原因貌似是该包同系统环境配置相关的问题。网上有很多人在使用该包时遇到了类似的问题，如果你是那个幸运儿，那么可以根据你控制台的报错信息，网上寻求有效的解决方法。
 - 由于该工具库中涵盖了几种字体，它们的体积相对来说还是偏大的，所以在全局安装的时候，可能会在网慢的情况下稍微有点慢，后续考虑如何优化
 - 关于图片上传相关的密钥信息，不要随着 dmk.config.js 文件上传到你的仓库中，你可以将生成的 dmk.config.js 文件放到.gitignore 中
 - 虽然 github 给我们提供了一个免费的服务器，可以用来做一些简单的项目搭建，比如博客和个人主页，但它貌似只局限于在一个仓库中使用。同时貌似对于图片的支持程度不太友好，还有就是比较慢。所以还是建议使用第三方云工具，有想配置却不会配置的，可以参考我的这篇[如何创建一个具备 cdn 加速的域名的 oss bucket](https://hexo.newarray.vip/2022/06/10/aliyun/)文章
+
+## 彩蛋
+
+由于该工具库中，封装了一套完整的上传图片方案，目前支持`阿里云oss`和`github`。所以我在想，会不会有以下一种可能，那就是如果你**已经**全局安装了该工具库，那么在你的任何工作目录中，你就只需要执行以下三步，就可以将你自己心仪的图片进行上传，用以节省一些时间。
+
+```javascript
+第一步：生成dmk.config.js配置文件
+dmk init
+
+第二步：配置dmk.config.js中的相关上传选项，删除canvas相关的配置
+
+第三步：选中心仪的图片进行上传
+dmk < github | oss > ./xxx/xxx.png
+```
 
 ## 参与
 
