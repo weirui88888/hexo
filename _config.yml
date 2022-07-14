@@ -106,6 +106,7 @@ theme_config:
     标签: /tags
     关于: /about
     工具: /tool
+    面试题: /offer
 
 # gitalk
   gitalk: true

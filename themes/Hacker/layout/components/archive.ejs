@@ -14,6 +14,7 @@ if (page.archive){
 
   <div class="archive">
     <% page.posts.each(function(item){ %>
+      <% if (!item.hidden){ %>
       <div class="<%= item.layout %> archive">
         <div class="archive-post">
           <time datetime="<%= item.date.toDate().toISOString() %>">
@@ -30,6 +31,7 @@ if (page.archive){
           <% } %>
         </div>
       </div>
+      <% } %>
     <% }); %>
     <%- partial('pagination') %>
   </div>
