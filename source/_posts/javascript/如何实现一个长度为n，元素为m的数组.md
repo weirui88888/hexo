@@ -1,8 +1,6 @@
 ---
 title: 如何实现一个长度为n，元素为m的数组
 date: 2022-07-10 12:39:14
-tags:
-categories:
 hidden: true
 ---
 
