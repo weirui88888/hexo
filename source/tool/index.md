@@ -32,6 +32,7 @@ layout: tool
 [点击实现撒花效果](https://party.js.org/)
 [快速生成好看的背景图片](https://doodad.dev/pattern-generator/)
 [好看的背景渐变](https://webgradients.com/)
+[微信文章排版工具](https://md.openwrite.cn)
 
 ### 在线编辑器
 [JSON可视化编辑器](https://jsonvisio.com/editor)
