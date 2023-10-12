@@ -3,17 +3,17 @@
 ### Source: https://github.com/hexojs/hexo/
 
 # Site
-title: newArray
-subtitle: "front-end worker"
-description: "Record the moments in life and work"
-keywords: front-end,react,vue
-author: newArray
+title: Xdz‘s Blog
+subtitle: "frontend web worker"
+description: "想多了都是问题，做多了都是答案"
+keywords: frontend,react,vue,nodejs,mongodb
+author: Xdz
 language: zh-CN
 timezone: ""
 
 # URL
 ### Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://hexo.newarray.vip
+url: http://www.newarray.vip
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
